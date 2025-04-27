@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/button';
 import MeuChaDigitalImage from '@/assets/meu-cha-digital.png';
 import LoqueiImage from '@/assets/loquei.png';
 import ForumPbImage from '@/assets/forum-pb.png';
-import DashboardImage from '@/assets/Dashboard.png';
+import DashboardImage from '@/assets/dashboard.png';
 import { ArrowRight } from 'lucide-react';
 
 const works = [
