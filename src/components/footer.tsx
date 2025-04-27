@@ -7,7 +7,6 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="flex flex-col gap-12">
           
-          {/* Seção de Contato */}
           <section aria-labelledby="contact-section">
             <h2 id="contact-section" className="sr-only">Contato</h2>
             <div className="flex flex-col md:flex-row justify-between gap-8">
@@ -34,7 +33,6 @@ const Footer: React.FC = () => {
             </div>
           </section>
 
-          {/* Seção de Localização */}
           <section aria-labelledby="location-section">
             <h2 id="location-section" className="sr-only">Localização</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -47,17 +45,17 @@ const Footer: React.FC = () => {
             </div>
           </section>
 
-          {/* Seção de Direitos Autorais e Links */}
           <section aria-labelledby="legal-section">
             <h2 id="legal-section" className="sr-only">Direitos Autorais e Links Legais</h2>
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
               <div className="flex gap-4">
                 <p className="text-sm">
-                  © 2025 Vitor Antunes. Todos os direitos reservados.
+                  © 2025 • Vitor Antunes.
                 </p>
                 <p className="text-sm hidden md:block">|</p>
                 <Link 
-                  href="/" 
+                  href="https://github.com/VitorHugoAntunes/Portfolio/blob/main/LICENSE"
+                  target="_blank" 
                   className="text-sm underline hover:text-gray-600" 
                   title="Licença de uso do site"
                   aria-label="Leia sobre a licença de uso do site"
@@ -66,7 +64,6 @@ const Footer: React.FC = () => {
                 </Link>
               </div>
 
-              {/* Links de Redes Sociais */}
               <div className="flex gap-4 items-end" role="navigation" aria-label="Links de redes sociais de Vitor Antunes">
                 <Link 
                   href="https://github.com/VitorHugoAntunes" 
