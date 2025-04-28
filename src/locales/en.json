@@ -1,0 +1,217 @@
+{
+  "navBar": {
+    "links": {
+      "home": "Home",
+      "about": "About me",
+      "works": "Works",
+      "contact": "Contact"
+    },
+    "buttons": {
+      "languageToggle": {
+        "en": "English",
+        "ptBR": "Portuguese (Brazil)",
+        "titles": {
+          "title": "Language toggle",
+          "en": "Current language: English",
+          "ptBR": "Current language: Portuguese (Brazilian)"
+        }
+      },
+      "themeToggle": {
+        "light": "Light",
+        "dark": "Dark",
+        "system": "System",
+        "titles": {
+          "title": "Theme toggle",
+          "light": "Current theme: Light",
+          "dark": "Current theme: Dark",
+          "system": "Current theme: System"
+        }
+      },
+      "menu": {
+        "open": "Menu",
+        "close": "Close menu"
+      }
+    }
+  },
+  "heroSection": {
+    "title": "Hi there",
+    "subtitle": "Developing more than just websites — creating experiences.",
+    "buttons": {
+      "viewProjects": "View Projects",
+      "cv": "Download CV",
+      "titles": {
+        "viewProjects": "View my projects",
+        "cv": "Download my CV"
+      }
+    },
+    "heroImage": {
+      "alt": "Vitor Hugo Antunes - Frontend Developer.",
+      "title": "Vitor Hugo Antunes - Frontend Developer."
+    }
+  },
+  "aboutSection": {
+    "introduction": "As a developer, I, Vitor Hugo, am driven by innovation and the constant pursuit of more efficient solutions. I have a passion for exploring new technologies, from modern frameworks to best development practices, to create robust and high-performance websites.",
+    "skills": {
+      "fullstackDevelopment": "Fullstack Development",
+      "javascriptAndTypescript": "JavaScript & TypeScript",
+      "reactAndNodejs": "React & Node.js",
+      "reactNative": "React Native",
+      "nextjs": "Next.js",
+      "restfulApis": "RESTful APIs",
+      "cloud": "AWS & Firebase",
+      "database": "PostgreSQL"
+    },
+    "description": "Currently, I focus on creating scalable and efficient solutions. I enjoy learning and applying new technologies, always focused on building systems that meet user needs and are sustainable in the long term. I aim to deliver clean, maintainable code and contribute to impactful projects."
+  },
+  "academicSection": {
+    "title": {
+      "span1": "My Academic Journey",
+      "span2": "& Milestones"
+    },
+    "education": {
+      "degrees": {
+        "technologist": {
+          "degree": "Technologist's Degree in in Systems Analysis and Development",
+          "institution": "Fatec Ipiranga",
+          "workload": "3 years",
+          "year": "2024"
+        },
+        "technical": {
+          "degree": "Technical Degree in Systems Development",
+          "institution": "Etec Mauá",
+          "workload": "1200h",
+          "year": "2020"
+        }
+      }
+    },
+    "certifications": {
+      "aws": {
+        "title": "AWS Certified Cloud Practitioner",
+        "institution": "Amazon Web Services",
+        "year": "2024"
+      },
+      "compass": {
+        "title": "Front-end Development (React) - AWS Cloud Context",
+        "institution": "Compass UOL",
+        "workload": "400h",
+        "year": "2024"
+      },
+      "rocketseat": {
+        "title": "ReactJS Track Completion",
+        "institution": "Rocketseat",
+        "workload": "50h",
+        "year": "2023"
+      }
+    },
+    "button": {
+      "title": "View All Certificates"
+    }
+  },
+  "worksSection": {
+    "title": "A developer focused on innovation and user-centric solutions.",
+    "subtitle": "My journey started with a passion for solving complex problems through code and creating seamless digital experiences.",
+    "button": {
+      "title": "View More Projects"
+    }
+  },
+  "faqSection": {
+    "title": "Quick Answers",
+    "questions": {
+      "question1": {
+        "question": "What types of development projects do you specialize in?",
+        "answer": "I specialize in full-stack web development and mobile app development, tailored to meet your specific needs."
+      },
+      "question2": {
+        "question": "What technologies do you use for development?",
+        "answer": "I work with a variety of technologies including React, React Native, Node.js, TypeScript, JavaScript, AWS for cloud services, and databases like PostgreSQL to build scalable and efficient applications."
+      },
+      "question3": {
+        "question": "How do I start a development project with you?",
+        "answer": "You can start by reaching out via the contact form or email. We'll discuss your project's goals, timeline, and technical requirements, and I'll provide a tailored proposal."
+      },
+      "question4": {
+        "question": "Do you provide ongoing support after the project is completed?",
+        "answer": "Yes! I offer post-launch support for bug fixes, updates, and ongoing improvements to ensure the continued success of your application."
+      }
+    }
+  },
+  "ctaSection": {
+    "title": {
+      "line1": "Have an idea?",
+      "line2": "Let’s build it together!"
+    },
+    "form": {
+      "fields": {
+        "firstName": {
+          "label": "First Name (required)",
+          "placeholder": "First Name",
+          "error": "First name is required."
+        },
+        "lastName": {
+          "label": "Last Name (required)",
+          "placeholder": "Last Name",
+          "error": "Last name is required."
+        },
+        "service": {
+          "label": "Service",
+          "placeholder": "Select a service",
+          "error": "Service is required."
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "Email address",
+          "error": "Invalid email."
+        },
+        "description": {
+          "label": "Description",
+          "placeholder": "Describe your project or idea",
+          "error": "Description is required."
+        }
+      },
+      "button": {
+        "submit": "Send Message"
+      },
+      "messages": {
+        "success": "Form submitted successfully!",
+        "error": "Error submitting the form.",
+        "connectionError": "Connection error when submitting the form.",
+        "zod": {
+          "firstName": "First name is required.",
+          "lastName": "Last name is required.",
+          "service": "Service is required.",
+          "email": "Invalid email.",
+          "description": "Description is required."
+        }
+      }
+    }
+  },
+  "footer": {
+    "contact": "Contact",
+    "location": "São Paulo, Brazil",
+    "legal": "Copyright and Legal Links",
+    "socials": {
+      "title": "Vitor Antunes social media links",
+      "github": {
+        "title": "Visit Vitor's GitHub profile"
+      },
+      "linkedin": {
+        "title": "Visit Vitor's LinkedIn profile"
+      },
+      "email": {
+        "title": "Send an email to Vitor"
+      },
+      "whatsapp": {
+        "title": "Send a message to Vitor on WhatsApp"
+      }
+    },
+    "links": {
+      "license": {
+        "title": "Website Usage License",
+        "label": "License"
+      },
+      "backToTop": {
+        "title": "Back to Top"
+      }
+    }
+  }
+}

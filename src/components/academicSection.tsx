@@ -10,41 +10,59 @@ import awsImage from '@/assets/aws.png';
 import compassImage from '@/assets/compasso-uol-1024.png';
 import rocketSeatImage from '@/assets/rocketseat.jpeg';
 import etecImage from '@/assets/etec.jpg';
-
-const academicAchievements = [
-  {
-    id: 1,
-    title: 'Technologist Degree in Systems Analysis and Development',
-    description: 'Fatec Ipiranga • 2024',
-    image: fatecImage,
-  },
-  {
-    id: 2,
-    title: 'AWS Certified Cloud Practitioner',
-    description: 'Amazon Web Services • 2024',
-    image: awsImage,
-  },
-  {
-    id: 3,
-    title: 'Front-end Development (React) - AWS Cloud Context',
-    description: 'Compass UOL • 400h • 2024',
-    image: compassImage,
-  },
-  {
-    id: 4,
-    title: 'ReactJS Track Completion',
-    description: 'Rocketseat • 50h • 2023',
-    image: rocketSeatImage,
-  },
-  {
-    id: 5,
-    title: 'Technical Degree in Systems Development',
-    description: 'ETEC Mauá • 1200h • 2020',
-    image: etecImage,
-  },
-];
+import { useTranslation } from './translation-provider';
+import { getNestedTranslation } from '@/utils/getTranslation'
 
 function AcademicSection() {
+  const { translations } = useTranslation()
+
+  const academicAchievements = [
+    {
+      id: 1,
+      title: getNestedTranslation(translations, 'academicSection.education.degrees.technologist.degree', ''),
+      description: `
+        ${getNestedTranslation(translations, 'academicSection.education.degrees.technologist.institution', '')} • 
+        ${getNestedTranslation(translations, 'academicSection.education.degrees.technologist.workload', '')} •
+        ${getNestedTranslation(translations, 'academicSection.education.degrees.technologist.year', '')}`,
+      image: fatecImage,
+    },
+    {
+      id: 2,
+      title: getNestedTranslation(translations, 'academicSection.certifications.aws.title', ''),
+      description: `
+        ${getNestedTranslation(translations, 'academicSection.certifications.aws.institution', '')} •
+        ${getNestedTranslation(translations, 'academicSection.certifications.aws.year', '')}`,
+      image: awsImage,
+    },
+    {
+      id: 3,
+      title: getNestedTranslation(translations, 'academicSection.certifications.compass.title', ''),
+      description: `
+        ${getNestedTranslation(translations, 'academicSection.certifications.compass.institution', '')} •
+        ${getNestedTranslation(translations, 'academicSection.certifications.compass.workload', '')} •
+        ${getNestedTranslation(translations, 'academicSection.certifications.compass.year', '')}`,
+      image: compassImage,
+    },
+    {
+      id: 4,
+      title: getNestedTranslation(translations, 'academicSection.certifications.rocketseat.title', ''),
+      description: `
+        ${getNestedTranslation(translations, 'academicSection.certifications.rocketseat.institution', '')} •
+        ${getNestedTranslation(translations, 'academicSection.certifications.rocketseat.workload', '')} •
+        ${getNestedTranslation(translations, 'academicSection.certifications.rocketseat.year', '')}`,	
+      image: rocketSeatImage,
+    },
+    {
+      id: 5,
+      title: getNestedTranslation(translations, 'academicSection.education.degrees.technical.degree', ''),
+      description: `
+        ${getNestedTranslation(translations, 'academicSection.education.degrees.technical.institution', '')} •
+        ${getNestedTranslation(translations, 'academicSection.education.degrees.technical.workload', '')} •
+        ${getNestedTranslation(translations, 'academicSection.education.degrees.technical.year', '')}`,
+      image: etecImage,
+    },
+  ];
+
   return (
     <section id="academic" className="py-12 md:py-20" aria-labelledby="academic-section-title">
       <div className="container mx-auto px-4 max-w-6xl">
@@ -56,7 +74,9 @@ function AcademicSection() {
           viewport={{ once: true, amount: 0.2 }}
           className="text-4xl md:text-6xl font-bold mb-12 leading-tight"
         >
-          My <span className="text-primary">Academic Journey</span> <br /> & Milestones
+          <span className="text-primary">
+            {getNestedTranslation(translations, 'academicSection.title.span1', '')}
+          </span> <br /> {getNestedTranslation(translations, 'academicSection.title.span2', '')}
         </motion.h2>
 
         <div className="relative flex flex-col gap-12 md:gap-24">
@@ -79,6 +99,7 @@ function AcademicSection() {
                     <Image
                       src={item.image}
                       alt={item.title}
+                      title={item.title}
                       fill
                       className="object-contain transition-transform hover:scale-105"
                     />
@@ -105,10 +126,10 @@ function AcademicSection() {
           viewport={{ once: true, amount: 0.2 }}
           className="text-center mt-12"
         >
-          <Button size="lg" aria-label="View all certificates" title='View all certificates' asChild>
+          <Button size="lg" aria-label="View all certificates" title={`${getNestedTranslation(translations, 'academicSection.button.title', '')}`} asChild>
             <Link href="https://www.linkedin.com/in/vitor-hugo-antunes-passos-59151018a/details/certifications/" target='_blank'>
               <ArrowRight className="mr-2 h-4 w-4" />
-              View All Certificates
+              {getNestedTranslation(translations, 'academicSection.button.title', '')}
             </Link>
           </Button>
         </motion.div>

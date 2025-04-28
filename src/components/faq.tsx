@@ -2,27 +2,31 @@
 import { motion } from 'framer-motion';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Separator } from '@/components/ui/separator';
-
-const faqs = [
-  { 
-    question: 'What types of development projects do you specialize in?', 
-    answer: 'I specialize in full-stack web development and mobile app development, tailored to meet your specific needs.' 
-  },
-  { 
-    question: 'What technologies do you use for development?', 
-    answer: 'I work with a variety of technologies including React, React Native, Node.js, TypeScript, JavaScript, AWS for cloud services, and databases like PostgreSQL to build scalable and efficient applications.' 
-  },
-  { 
-    question: 'How do I start a development project with you?', 
-    answer: 'You can start by reaching out via the contact form or email. We\'ll discuss your project\'s goals, timeline, and technical requirements, and I\'ll provide a tailored proposal.' 
-  },
-  { 
-    question: 'Do you provide ongoing support after the project is completed?', 
-    answer: 'Yes! I offer post-launch support for bug fixes, updates, and ongoing improvements to ensure the continued success of your application.' 
-  },
-];
+import { useTranslation } from './translation-provider';
+import { getNestedTranslation } from '@/utils/getTranslation'
 
 function FAQSection() {
+  const { translations } = useTranslation()
+
+  const faqs = [
+    { 
+      question: getNestedTranslation(translations, 'faqSection.questions.question1.question', ''),
+      answer: getNestedTranslation(translations, 'faqSection.questions.question1.answer', '')
+    },
+    { 
+      question: getNestedTranslation(translations, 'faqSection.questions.question2.question', ''),
+      answer: getNestedTranslation(translations, 'faqSection.questions.question2.answer', '')
+    },
+    { 
+      question: getNestedTranslation(translations, 'faqSection.questions.question3.question', ''),
+      answer: getNestedTranslation(translations, 'faqSection.questions.question3.answer', '')
+    },
+    { 
+      question: getNestedTranslation(translations, 'faqSection.questions.question4.question', ''),
+      answer: getNestedTranslation(translations, 'faqSection.questions.question4.answer', '')
+    },
+  ];
+
   return (
     <section className="py-12 md:py-16" aria-labelledby="faq-section">
       <div className="container mx-auto px-4 max-w-7xl">
@@ -34,7 +38,7 @@ function FAQSection() {
           viewport={{ once: true, amount: 0.2 }}
           className="text-4xl md:text-5xl font-bold mb-12 leading-tight"
         >
-          Quick Answers
+          {getNestedTranslation(translations, 'faqSection.title', '')}
         </motion.h2>
 
         <div role="region" aria-labelledby="faq-section" className="w-full">
@@ -52,7 +56,7 @@ function FAQSection() {
                 >
                   <AccordionItem value={`item-${index}`} className="border-none">
                     <AccordionTrigger 
-                      className="flex justify-between items-center w-full py-4 text-left cursor-pointer group hover:no-underline"
+                      className="flex justify-between items-center w-full py-4 text-left cursor-pointer group hover:underline"
                       aria-expanded="false" 
                       aria-controls={`content-${index}`}
                     >

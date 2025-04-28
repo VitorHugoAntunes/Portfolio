@@ -1,6 +1,21 @@
 import { motion } from 'framer-motion';
+import { useTranslation } from './translation-provider';
+import { getNestedTranslation } from '@/utils/getTranslation'
 
 function ContentSection() {
+  const { translations } = useTranslation()
+
+  const skillKeys = [
+    'fullstackDevelopment',
+    'javascriptAndTypescript',
+    'reactAndNodejs',
+    'reactNative',
+    'nextjs',
+    'restfulApis',
+    'cloud',
+    'database',
+  ];
+
   return (
     <section id='about-me' className="py-8 md:py-12" aria-labelledby="about-me-title">
       <div className="container mx-auto px-4 max-w-7xl">
@@ -18,7 +33,7 @@ function ContentSection() {
               className="text-lg font-medium leading-relaxed"
               aria-label="Developer introduction"
             >
-              As a developer, I, Vitor Hugo, am driven by innovation and the constant pursuit of more efficient solutions. I have a passion for exploring new technologies, from modern frameworks to best development practices, to create robust and high-performance websites.
+              {getNestedTranslation(translations, 'aboutSection.introduction', '')}
             </p>
           </motion.div>
           <motion.div
@@ -34,14 +49,12 @@ function ContentSection() {
               className="text-2xl font-bold leading-relaxed"
               aria-label="Developer skills"
             >
-              Fullstack Development<br />
-              JavaScript & TypeScript<br />
-              React & Node.js<br />
-              React Native<br />
-              Next.js<br />
-              RESTful APIs<br />
-              AWS & Firebase<br />
-              PostgreSQL<br />
+              {skillKeys.map((key, index) => (
+                <span key={key}>
+                  {getNestedTranslation(translations, `aboutSection.skills.${key}`, '')}
+                  {index < skillKeys.length - 1 && <br />}
+                </span>
+              ))}
             </p>
           </motion.div>
         </div>
@@ -55,7 +68,7 @@ function ContentSection() {
             className="text-lg font-medium leading-relaxed max-w-2xl"
             aria-label="Developer focus"
           >
-            Currently, I focus on creating scalable and efficient solutions. I enjoy learning and applying new technologies, always focused on building systems that meet user needs and are sustainable in the long term. I aim to deliver clean, maintainable code and contribute to impactful projects.
+            {getNestedTranslation(translations, 'aboutSection.description', '')}
           </p>
         </motion.div>
       </div>

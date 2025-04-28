@@ -1,0 +1,217 @@
+{
+  "navBar": {
+    "links": {
+      "home": "Início",
+      "about": "Sobre mim",
+      "works": "Trabalhos",
+      "contact": "Contato"
+    },
+    "buttons": {
+      "languageToggle": {
+        "en": "Inglês",
+        "ptBR": "Português (Brasil)",
+        "titles": {
+          "title": "Alternar idioma",
+          "en": "Idioma atual: Inglês",
+          "ptBR": "Idioma atual: Português (Brasil)"
+        }
+      },
+      "themeToggle": {
+        "light": "Claro",
+        "dark": "Escuro",
+        "system": "Sistema",
+        "titles": {
+          "title": "Alternar tema",
+          "light": "Tema atual: Claro",
+          "dark": "Tema atual: Escuro",
+          "system": "Tema atual: Sistema"
+        }
+      },
+      "menu": {
+        "open": "Menu",
+        "close": "Fechar menu"
+      }
+    }
+  },
+  "heroSection": {
+    "title": "Olá",
+    "subtitle": "Desenvolvo mais do que apenas sites — crio experiências.",
+    "buttons": {
+      "viewProjects": "Ver Projetos",
+      "cv": "Baixar Currículo",
+      "titles": {
+        "viewProjects": "Veja meus projetos",
+        "cv": "Baixe meu currículo"
+      }
+    },
+    "heroImage": {
+      "alt": "Vitor Hugo Antunes - Desenvolvedor Frontend.",
+      "title": "Vitor Hugo Antunes - Desenvolvedor Frontend."
+    }
+  },
+  "aboutSection": {
+    "introduction": "Como desenvolvedor, eu, Vitor Hugo, sou movido pela inovação e pela constante busca por soluções mais eficientes. Tenho uma paixão por explorar novas tecnologias, desde frameworks modernos até as melhores práticas de desenvolvimento, para criar sites robustos e de alto desempenho.",
+    "skills": {
+      "fullstackDevelopment": "Desenvolvimento Fullstack",
+      "javascriptAndTypescript": "JavaScript & TypeScript",
+      "reactAndNodejs": "React & Node.js",
+      "reactNative": "React Native",
+      "nextjs": "Next.js",
+      "restfulApis": "RESTful APIs",
+      "cloud": "AWS & Firebase",
+      "database": "PostgreSQL"
+    },
+    "description": "Atualmente, foco em criar soluções escaláveis e eficientes. Gosto de aprender e aplicar novas tecnologias, sempre com foco na construção de sistemas que atendam às necessidades dos usuários e sejam sustentáveis a longo prazo. Meu objetivo é entregar código limpo, manutenível e contribuir para projetos impactantes."
+  },
+  "academicSection": {
+    "title": {
+      "span1": "Minha Jornada Acadêmica",
+      "span2": "& Conquistas"
+    },
+    "education": {
+      "degrees": {
+        "technologist": {
+          "degree": "Tecnólogo em Análise e Desenvolvimento de Sistemas",
+          "institution": "Fatec Ipiranga",
+          "workload": "3 anos",
+          "year": "2024"
+        },
+        "technical": {
+          "degree": "Técnico em Desenvolvimento de Sistemas",
+          "institution": "Etec Mauá",
+          "workload": "1200h",
+          "year": "2020"
+        }
+      }
+    },
+    "certifications": {
+      "aws": {
+        "title": "AWS Certified Cloud Practitioner",
+        "institution": "Amazon Web Services",
+        "year": "2024"
+      },
+      "compass": {
+        "title": "Desenvolvimento Front-end (React) - AWS Cloud Context",
+        "institution": "Compass UOL",
+        "workload": "400h",
+        "year": "2024"
+      },
+      "rocketseat": {
+        "title": "Conclusão da Trilha de ReactJS",
+        "institution": "Rocketseat",
+        "workload": "50h",
+        "year": "2023"
+      }
+    },
+    "button": {
+      "title": "Ver Todos os Certificados"
+    }
+  },
+  "worksSection": {
+    "title": "Um desenvolvedor focado em inovação e soluções centradas no usuário.",
+    "subtitle": "Minha jornada começou com uma paixão por resolver problemas complexos através do código e criar experiências digitais fluídas.",
+    "button": {
+      "title": "Ver Mais Projetos"
+    }
+  },
+  "faqSection": {
+    "title": "Respostas Rápidas",
+    "questions": {
+      "question1": {
+        "question": "Em que tipos de projetos de desenvolvimento você é especializado?",
+        "answer": "Sou especializado em desenvolvimento web full-stack e desenvolvimento de aplicativos mobile, adaptados para atender às suas necessidades específicas."
+      },
+      "question2": {
+        "question": "Quais tecnologias você utiliza para o desenvolvimento?",
+        "answer": "Trabalho com diversas tecnologias, incluindo React, React Native, Node.js, TypeScript, JavaScript, AWS para serviços em nuvem e bancos de dados como PostgreSQL para construir aplicações escaláveis e eficientes."
+      },
+      "question3": {
+        "question": "Como posso iniciar um projeto de desenvolvimento com você?",
+        "answer": "Você pode começar entrando em contato pelo formulário de contato ou por e-mail. Vamos discutir os objetivos, o prazo e os requisitos técnicos do seu projeto, e eu enviarei uma proposta personalizada."
+      },
+      "question4": {
+        "question": "Você oferece suporte contínuo após a conclusão do projeto?",
+        "answer": "Sim! Ofereço suporte pós-lançamento para correção de bugs, atualizações e melhorias contínuas, garantindo o sucesso contínuo da sua aplicação."
+      }
+    }
+  },
+  "ctaSection": {
+    "title": {
+      "line1": "Tem uma ideia?",
+      "line2": "Vamos construí-la juntos!"
+    },
+    "form": {
+      "fields": {
+        "firstName": {
+          "label": "Nome (obrigatório)",
+          "placeholder": "Nome",
+          "error": "O nome é obrigatório."
+        },
+        "lastName": {
+          "label": "Sobrenome (obrigatório)",
+          "placeholder": "Sobrenome",
+          "error": "O sobrenome é obrigatório."
+        },
+        "service": {
+          "label": "Serviço",
+          "placeholder": "Selecione um serviço",
+          "error": "O serviço é obrigatório."
+        },
+        "email": {
+          "label": "E-mail",
+          "placeholder": "Endereço de e-mail",
+          "error": "E-mail inválido."
+        },
+        "description": {
+          "label": "Descrição",
+          "placeholder": "Descreva seu projeto ou ideia",
+          "error": "A descrição é obrigatória."
+        }
+      },
+      "button": {
+        "submit": "Enviar mensagem"
+      },
+      "messages": {
+        "success": "Formulário enviado com sucesso!",
+        "error": "Erro ao enviar o formulário.",
+        "connectionError": "Erro de conexão ao enviar o formulário.",
+        "zod": {
+          "firstName": "O nome é obrigatório.",
+          "lastName": "O sobrenome é obrigatório.",
+          "service": "O serviço é obrigatório.",
+          "email": "E-mail inválido.",
+          "description": "A descrição é obrigatória."
+        }
+      }
+    }
+  },
+  "footer": {
+    "contact": "Contato",
+    "location": "São Paulo, Brasil",
+    "legal": "Direitos Autorais e Links Legais",
+    "socials": {
+      "title": "Links para redes sociais de Vitor Antunes",
+      "github": {
+        "title": "Visite o perfil do Vitor no GitHub"
+      },
+      "linkedin": {
+        "title": "Visite o perfil do Vitor no LinkedIn"
+      },
+      "email": {
+        "title": "Envie um e-mail para o Vitor"
+      },
+      "whatsapp": {
+        "title": "Envie uma mensagem para o Vitor no WhatsApp"
+      }
+    },
+    "links": {
+      "license": {
+        "title": "Licença de Uso do Site",
+        "label": "Licença"
+      },
+      "backToTop": {
+        "title": "Voltar ao Topo"
+      }
+    }
+  }
+}

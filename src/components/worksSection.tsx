@@ -10,6 +10,8 @@ import LoqueiImage from '@/assets/loquei.png';
 import ForumPbImage from '@/assets/forum-pb.png';
 import DashboardImage from '@/assets/dashboard.png';
 import { ArrowRight } from 'lucide-react';
+import { getNestedTranslation } from '@/utils/getTranslation'
+import { useTranslation } from './translation-provider';
 
 const works = [
   { id: 1, title: 'Meu Chá Digital', category: 'Fullstack', image: MeuChaDigitalImage, slug: 'https://meuchadigital.com/' },
@@ -19,6 +21,8 @@ const works = [
 ];
 
 function WorksSection() {
+  const { translations } = useTranslation()
+
   return (
     <section id="works" className="py-12 md:py-16" aria-labelledby="works-section-title">
       <div className="container mx-auto px-4 max-w-7xl">
@@ -32,7 +36,7 @@ function WorksSection() {
             className="text-5xl md:text-7xl font-bold mb-8 leading-tight"
             aria-label="A developer focused on innovation and user-centric solutions"
           >
-            A developer focused on innovation and user-centric solutions.
+            {getNestedTranslation(translations, 'worksSection.title', '')}
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 150 }}
@@ -41,7 +45,7 @@ function WorksSection() {
             viewport={{ once: true, amount: 0.2 }}
             className="text-lg font-medium mb-12 max-w-2xl leading-relaxed"
           >
-            My journey started with a passion for solving complex problems through code and creating seamless digital experiences.
+            {getNestedTranslation(translations, 'worksSection.subtitle', '')}
           </motion.p>
         </header>
 
@@ -111,10 +115,10 @@ function WorksSection() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="View more projects"
-                title="View more projects"
+                title={`${getNestedTranslation(translations, 'worksSection.button.title', '')}`}
               >
                 <ArrowRight className="mr-2 h-4 w-4" />
-                View More Projects
+                {getNestedTranslation(translations, 'worksSection.button.title', '')}
               </Link>
             </Button>
           </div>

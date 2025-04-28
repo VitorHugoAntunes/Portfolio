@@ -1,31 +1,37 @@
 import Link from "next/link";
 import { Linkedin, Github } from 'lucide-react';
+import { useTranslation } from "./translation-provider";
+import { getNestedTranslation } from '@/utils/getTranslation'
 
-const Footer: React.FC = () => {
+function Footer() {
+  const { translations } = useTranslation()
+
   return (
     <footer className="py-12 md:py-16 bg-background" role="contentinfo">
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="flex flex-col gap-12">
           
           <section aria-labelledby="contact-section">
-            <h2 id="contact-section" className="sr-only">Contato</h2>
+            <h2 id="contact-section" className="sr-only">
+              {getNestedTranslation(translations, 'footer.contact', '')}
+            </h2>
             <div className="flex flex-col md:flex-row justify-between gap-8">
               <div>
                 <a 
                   href="mailto:vitor4ntunes@gmail.com" 
                   target="_blank" 
                   className="text-2xl md:text-5xl font-bold block mt-4 hover:text-gray-600" 
-                  title="Enviar um e-mail para Vitor Antunes"
-                  aria-label="Envie um e-mail para Vitor Antunes"
+                  title={getNestedTranslation(translations, 'footer.socials.email.title', '')}
+                  aria-label={getNestedTranslation(translations, 'footer.socials.email.title', '')}
                 >
                   vitor4ntunes@gmail.com
                 </a>
                 <a 
-                  href="tel:+5581973220877" 
+                  href="https://api.whatsapp.com/send?phone=5511973220877" 
                   target="_blank" 
                   className="text-2xl md:text-5xl font-bold block mt-4 hover:text-gray-600" 
-                  title="Ligar para (+55) 11 97322-0877"
-                  aria-label="Ligue para (+55) 11 97322-0877"
+                  title={getNestedTranslation(translations, 'footer.socials.whatsapp.title', '')}
+                  aria-label={getNestedTranslation(translations, 'footer.socials.whatsapp.title', '')}
                 >
                   (+55) 11 97322-0877
                 </a>
@@ -34,11 +40,13 @@ const Footer: React.FC = () => {
           </section>
 
           <section aria-labelledby="location-section">
-            <h2 id="location-section" className="sr-only">Localização</h2>
+            <h2 id="location-section" className="sr-only">
+              {getNestedTranslation(translations, 'footer.location', '')}
+            </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div>
                 <p className="text-lg">
-                  São Paulo, Brazil<br />
+                  {getNestedTranslation(translations, 'footer.location', '')}<br />
                   2025
                 </p>
               </div>
@@ -46,7 +54,9 @@ const Footer: React.FC = () => {
           </section>
 
           <section aria-labelledby="legal-section">
-            <h2 id="legal-section" className="sr-only">Direitos Autorais e Links Legais</h2>
+            <h2 id="legal-section" className="sr-only">
+              {getNestedTranslation(translations, 'footer.legal', '')}
+            </h2>
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
               <div className="flex gap-4">
                 <p className="text-sm">
@@ -57,20 +67,20 @@ const Footer: React.FC = () => {
                   href="https://github.com/VitorHugoAntunes/Portfolio/blob/main/LICENSE"
                   target="_blank" 
                   className="text-sm underline hover:text-gray-600" 
-                  title="Licença de uso do site"
-                  aria-label="Leia sobre a licença de uso do site"
+                  title={getNestedTranslation(translations, 'footer.links.license.title', '')}
+                  aria-label={getNestedTranslation(translations, 'footer.links.license.title', '')}
                 >
-                  License
+                  {getNestedTranslation(translations, 'footer.links.license.label', '')}
                 </Link>
               </div>
 
-              <div className="flex gap-4 items-end" role="navigation" aria-label="Links de redes sociais de Vitor Antunes">
+              <div className="flex gap-4 items-end" role="navigation" aria-label={getNestedTranslation(translations, 'footer.socials.title', '')}>
                 <Link 
                   href="https://github.com/VitorHugoAntunes" 
                   target="_blank" 
                   className="hover:text-gray-600" 
-                  title="Visite o perfil de Vitor Antunes no GitHub"
-                  aria-label="Visite o GitHub de Vitor Antunes"
+                  title={getNestedTranslation(translations, 'footer.socials.github.title', '')}
+                  aria-label={getNestedTranslation(translations, 'footer.socials.github.title', '')}
                 >
                   <Github className="h-6 w-6" />
                 </Link>
@@ -78,18 +88,18 @@ const Footer: React.FC = () => {
                   href="https://www.linkedin.com/in/vitor-hugo-antunes-passos-59151018a/" 
                   target="_blank" 
                   className="hover:text-gray-600" 
-                  title="Visite o perfil de Vitor Antunes no LinkedIn"
-                  aria-label="Visite o LinkedIn de Vitor Antunes"
+                  title={getNestedTranslation(translations, 'footer.socials.linkedin.title', '')}
+                  aria-label={getNestedTranslation(translations, 'footer.socials.linkedin.title', '')}
                 >
                   <Linkedin className="h-6 w-6" />
                 </Link>
                 <Link 
                   href="#top" 
                   className="text-sm underline hover:text-gray-600" 
-                  title="Voltar ao topo da página"
-                  aria-label="Voltar para o topo da página"
+                  title={getNestedTranslation(translations, 'footer.links.backToTop.title', '')}
+                  aria-label={getNestedTranslation(translations, 'footer.links.backToTop.title', '')}
                 >
-                  Back to Top
+                  {getNestedTranslation(translations, 'footer.links.backToTop.title', '')}
                 </Link>
               </div>
             </div>

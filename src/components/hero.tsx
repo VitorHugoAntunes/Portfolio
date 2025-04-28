@@ -6,7 +6,12 @@ import { Download } from "lucide-react";
 
 import hero from "@/assets/hero.png";
 
+import { getNestedTranslation } from '@/utils/getTranslation'
+import { useTranslation } from "./translation-provider";
+
 const HeroSection = () => {
+  const { translations } = useTranslation();
+
   return (
     <section className="py-2 md:py-10 lg:py-12" aria-labelledby="hero-section">
       <div className="container mx-auto max-w-7xl">
@@ -19,7 +24,7 @@ const HeroSection = () => {
             className="text-[24.7vw] xl:text-[19.56rem] font-bold leading-none tracking-tight whitespace-nowrap text-center lg:text-left"
             aria-label="Introduction to the site"
           >
-            Hi there
+            {getNestedTranslation(translations, 'heroSection.title', 'Hi there')}
           </motion.h1>
           <div className="flex flex-col lg:flex-row gap-6 md:gap-8">
             <motion.div
@@ -30,27 +35,27 @@ const HeroSection = () => {
               role="contentinfo"
             >
               <h2 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-medium leading-tight pl-2 md:pl-4 text-center lg:text-left" aria-label="Subheading">
-                Developing more than just websites — creating experiences.
+                {getNestedTranslation(translations, 'heroSection.subtitle', "I'm Vitor Hugo Antunes")}
               </h2>
               <div className="flex gap-3 md:gap-4 mt-4 md:mt-6 justify-center lg:justify-start pl-2 md:pl-4">
                 <Button
                   asChild
                   size="lg"
-                  aria-label="View my projects"
-                  title="View my projects"
+                  aria-label={getNestedTranslation(translations, 'heroSection.buttons.titles.viewProjects', 'View my projects')}
+                  title={getNestedTranslation(translations, 'heroSection.buttons.titles.viewProjects', 'View my projects')}
                 >
-                  <Link href="#works">View Projects</Link>
+                  <Link href="#works">{getNestedTranslation(translations, 'heroSection.buttons.viewProjects', 'View my projects')}</Link>
                 </Button>
                 <Button
                   asChild
                   size="lg"
                   variant="outline"
-                  aria-label="Download my CV"
-                  title="Download my CV"
+                  aria-label={getNestedTranslation(translations, 'heroSection.buttons.titles.cv', 'Download my CV')}
+                  title={getNestedTranslation(translations, 'heroSection.buttons.titles.cv', 'Download my CV')}
                 >
                   <Link href="/Vitor_Hugo_Antunes_Desenvolvedor_Frontend.pdf" target="_blank" download>
                     <Download className="mr-2 h-4 w-4" />
-                    Download CV
+                    {getNestedTranslation(translations, 'heroSection.buttons.cv', 'Download my CV')}
                   </Link>
                 </Button>
               </div>
@@ -68,13 +73,13 @@ const HeroSection = () => {
               >
                 <Image
                   src={hero}
-                  alt="A portrait of a developer working on a laptop"
+                  alt={getNestedTranslation(translations, 'heroSection.heroImage.alt', 'Vitor Hugo Antunes - Frontend Developer.')}
                   width={560}
                   height={588}
                   layout="responsive"
                   className="w-full h-full rounded-lg object-cover"
                   aria-labelledby="hero-image"
-                  title="Vitor Hugo Antunes - Frontend Developer"
+                  title={getNestedTranslation(translations, 'heroSection.heroImage.title', 'Vitor Hugo Antunes - Frontend Developer.')}
                 />
               </div>
             </motion.div>
