@@ -68,7 +68,7 @@ function FAQSection() {
                       className="overflow-hidden text-sm data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
                       aria-labelledby={`item-${index}`}
                     >
-                      <div className="pb-4 pt-0 text-gray-600">{faq.answer}</div>
+                      <div className="pb-4 pt-0 text-muted-foreground">{faq.answer}</div>
                     </AccordionContent>
                   </AccordionItem>
 

@@ -95,7 +95,7 @@ function AcademicSection() {
                 aria-labelledby={`achievement-title-${item.id}`}
               >
                 <div className="w-full md:w-1/2 flex justify-center">
-                  <div className="relative w-full max-w-[500px] aspect-video overflow-hidden rounded-2xl bg-background">
+                  <div className={`relative w-full max-w-[500px] aspect-video overflow-hidden rounded-2xl bg-background ${index === 3 ? "dark:bg-[#9956f6]" : "dark:bg-white"}`}>
                     <Image
                       src={item.image}
                       alt={item.title}

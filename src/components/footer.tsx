@@ -10,26 +10,28 @@ function Footer() {
     <footer className="py-12 md:py-16 bg-background" role="contentinfo">
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="flex flex-col gap-12">
-          
+
           <section aria-labelledby="contact-section">
             <h2 id="contact-section" className="sr-only">
               {getNestedTranslation(translations, 'footer.contact', '')}
             </h2>
             <div className="flex flex-col md:flex-row justify-between gap-8">
               <div>
-                <a 
-                  href="mailto:vitor4ntunes@gmail.com" 
-                  target="_blank" 
-                  className="text-2xl md:text-5xl font-bold block mt-4 hover:text-gray-600" 
+                <a
+                  href="mailto:vitor4ntunes@gmail.com"
+                  className="text-2xl md:text-5xl font-bold block mt-4 hover:text-muted-foreground"
                   title={getNestedTranslation(translations, 'footer.socials.email.title', '')}
-                  aria-label={getNestedTranslation(translations, 'footer.socials.email.title', '')}
+                  onClick={(event) => {
+                    event.preventDefault();
+                    window.open('mailto:vitor4ntunes@gmail.com', 'mail');
+                  }}
                 >
                   vitor4ntunes@gmail.com
                 </a>
-                <a 
-                  href="https://api.whatsapp.com/send?phone=5511973220877" 
-                  target="_blank" 
-                  className="text-2xl md:text-5xl font-bold block mt-4 hover:text-gray-600" 
+                <a
+                  href="https://api.whatsapp.com/send?phone=5511973220877"
+                  target="_blank"
+                  className="text-2xl md:text-5xl font-bold block mt-4 hover:text-muted-foreground"
                   title={getNestedTranslation(translations, 'footer.socials.whatsapp.title', '')}
                   aria-label={getNestedTranslation(translations, 'footer.socials.whatsapp.title', '')}
                 >
@@ -63,10 +65,10 @@ function Footer() {
                   © 2025 • Vitor Antunes.
                 </p>
                 <p className="text-sm hidden md:block">|</p>
-                <Link 
+                <Link
                   href="https://github.com/VitorHugoAntunes/Portfolio/blob/main/LICENSE"
-                  target="_blank" 
-                  className="text-sm underline hover:text-gray-600" 
+                  target="_blank"
+                  className="text-sm underline hover:text-muted-foreground"
                   title={getNestedTranslation(translations, 'footer.links.license.title', '')}
                   aria-label={getNestedTranslation(translations, 'footer.links.license.title', '')}
                 >
@@ -75,27 +77,27 @@ function Footer() {
               </div>
 
               <div className="flex gap-4 items-end" role="navigation" aria-label={getNestedTranslation(translations, 'footer.socials.title', '')}>
-                <Link 
-                  href="https://github.com/VitorHugoAntunes" 
-                  target="_blank" 
-                  className="hover:text-gray-600" 
+                <Link
+                  href="https://github.com/VitorHugoAntunes"
+                  target="_blank"
+                  className="hover:text-muted-foreground"
                   title={getNestedTranslation(translations, 'footer.socials.github.title', '')}
                   aria-label={getNestedTranslation(translations, 'footer.socials.github.title', '')}
                 >
                   <Github className="h-6 w-6" />
                 </Link>
-                <Link 
-                  href="https://www.linkedin.com/in/vitor-hugo-antunes-passos-59151018a/" 
-                  target="_blank" 
-                  className="hover:text-gray-600" 
+                <Link
+                  href="https://www.linkedin.com/in/vitor-hugo-antunes-passos-59151018a/"
+                  target="_blank"
+                  className="hover:text-muted-foreground"
                   title={getNestedTranslation(translations, 'footer.socials.linkedin.title', '')}
                   aria-label={getNestedTranslation(translations, 'footer.socials.linkedin.title', '')}
                 >
                   <Linkedin className="h-6 w-6" />
                 </Link>
-                <Link 
-                  href="#top" 
-                  className="text-sm underline hover:text-gray-600" 
+                <Link
+                  href="#top"
+                  className="text-sm underline hover:text-muted-foreground"
                   title={getNestedTranslation(translations, 'footer.links.backToTop.title', '')}
                   aria-label={getNestedTranslation(translations, 'footer.links.backToTop.title', '')}
                 >

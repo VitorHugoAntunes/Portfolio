@@ -29,7 +29,7 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen w-full bg-white text-black font-geist px-[4.48%]" role="document">
+    <div className="min-h-screen w-full bg-background font-geist px-[4.48%]" role="document">
       <div className="max-w-[1140px] mx-auto">
         <header>
           <Navbar />

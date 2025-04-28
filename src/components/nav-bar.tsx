@@ -21,7 +21,7 @@ function Navbar() {
           <div className="flex space-x-8">
             <Link
               href="/"
-              className="text-sm hover:text-gray-600 hover:underline"
+              className="text-sm hover:text-muted-foreground hover:underline"
               aria-label="Go to homepage"
               title={getNestedTranslation(translations, 'navBar.links.home', 'Home')}
             >
@@ -29,7 +29,7 @@ function Navbar() {
             </Link>
             <Link
               href="#about-me"
-              className="text-sm hover:text-gray-600 hover:underline"
+              className="text-sm hover:text-muted-foreground hover:underline"
               aria-label="Go to about me section"
               title={getNestedTranslation(translations, 'navBar.links.about', 'About me')}
 
@@ -38,7 +38,7 @@ function Navbar() {
             </Link>
             <Link
               href="#works"
-              className="text-sm hover:text-gray-600 hover:underline"
+              className="text-sm hover:text-muted-foreground hover:underline"
               aria-label="Go to works section"
               title={getNestedTranslation(translations, 'navBar.links.works', 'Works')}
             >
@@ -46,7 +46,7 @@ function Navbar() {
             </Link>
             <Link
               href="#contact"
-              className="text-sm hover:text-gray-600 hover:underline"
+              className="text-sm hover:text-muted-foreground hover:underline"
               aria-label="Go to contact section"
               title={getNestedTranslation(translations, 'navBar.links.contact', 'Contact')}
             >
@@ -85,7 +85,7 @@ function Navbar() {
           aria-hidden={!isMobileMenuOpen}
         >
           <div className="flex justify-between items-center mb-8">
-            <Link href="/" onClick={() => setIsMobileMenuOpen(false)} aria-label="Go to homepage">
+            <Link href="/" onClick={() => setIsMobileMenuOpen(false)} aria-label="Go to homepage" className='hover:text-muted-foreground'>
               <h1 id="mobile-menu-title" className="text-xl font-bold">
                 Vitor Antunes
               </h1>
@@ -108,7 +108,7 @@ function Navbar() {
             <Link
               href="/"
               onClick={() => setIsMobileMenuOpen(false)}
-              className="hover:text-gray-600 hover:underline"
+              className="hover:text-muted-foreground hover:underline"
               aria-label="Go to homepage"
               title={getNestedTranslation(translations, 'navBar.links.home', 'Home')}
             >
@@ -117,7 +117,7 @@ function Navbar() {
             <Link
               href="#about-me"
               onClick={() => setIsMobileMenuOpen(false)}
-              className="hover:text-gray-600 hover:underline"
+              className="hover:text-muted-foreground hover:underline"
               aria-label="Go to about me section"
               title={getNestedTranslation(translations, 'navBar.links.about', 'About me')}
             >
@@ -126,7 +126,7 @@ function Navbar() {
             <Link
               href="#works"
               onClick={() => setIsMobileMenuOpen(false)}
-              className="hover:text-gray-600 hover:underline"
+              className="hover:text-muted-foreground hover:underline"
               aria-label="Go to works section"
               title={getNestedTranslation(translations, 'navBar.links.works', 'Works')}
             >
@@ -135,7 +135,7 @@ function Navbar() {
             <Link
               href="#contact"
               onClick={() => setIsMobileMenuOpen(false)}
-              className="hover:text-gray-600 hover:underline"
+              className="hover:text-muted-foreground hover:underline"
               aria-label="Go to contact section"
               title={getNestedTranslation(translations, 'navBar.links.contact', 'Contact')}
             >
