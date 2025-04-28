@@ -1,6 +1,6 @@
 "use client"
 
-import { Moon, Sun } from 'lucide-react'
+import { Moon, Sun, Check } from 'lucide-react'
 
 import { useTheme } from '@/components/theme-provider'
 import { Button } from '@/components/ui/button'
@@ -9,6 +9,8 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
+  DropdownMenuLabel,
+  DropdownMenuSeparator
 } from '@/components/ui/dropdown-menu'
 
 import { useTranslation } from './translation-provider';
@@ -18,14 +20,22 @@ export function ThemeToggle() {
   const { theme, setTheme } = useTheme()
   const { translations } = useTranslation()
 
+  const isSelected = (value: string) => theme === value
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button 
-          variant="outline" 
-          size="icon" 
-          className='cursor-pointer' 
-          title={theme === 'light' ? getNestedTranslation(translations, 'navBar.buttons.themeToggle.titles.light', '') : theme === 'dark' ? getNestedTranslation(translations, 'navBar.buttons.themeToggle.titles.dark', '') : getNestedTranslation(translations, 'navBar.buttons.themeToggle.titles.system', '')}
+        <Button
+          variant="outline"
+          size="icon"
+          className="cursor-pointer"
+          title={
+            theme === 'light'
+              ? getNestedTranslation(translations, 'navBar.buttons.themeToggle.titles.light', '')
+              : theme === 'dark'
+                ? getNestedTranslation(translations, 'navBar.buttons.themeToggle.titles.dark', '')
+                : getNestedTranslation(translations, 'navBar.buttons.themeToggle.titles.system', '')
+          }
           aria-label="Toggle theme"
         >
           <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
@@ -36,13 +46,20 @@ export function ThemeToggle() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
+        <DropdownMenuLabel>
+          {getNestedTranslation(translations, 'navBar.buttons.themeToggle.titles.title', 'Select Language')}
+        </DropdownMenuLabel>
+        <DropdownMenuSeparator />
         <DropdownMenuItem onClick={() => setTheme('light')}>
+          {isSelected('light') && <Check className="mr-2 h-4 w-4" />}
           {getNestedTranslation(translations, 'navBar.buttons.themeToggle.light', 'Light')}
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme('dark')}>
+          {isSelected('dark') && <Check className="mr-2 h-4 w-4" />}
           {getNestedTranslation(translations, 'navBar.buttons.themeToggle.dark', 'Dark')}
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme('system')}>
+          {isSelected('system') && <Check className="mr-2 h-4 w-4" />}
           {getNestedTranslation(translations, 'navBar.buttons.themeToggle.system', 'System')}
         </DropdownMenuItem>
       </DropdownMenuContent>

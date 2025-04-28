@@ -8,11 +8,11 @@
     },
     "buttons": {
       "languageToggle": {
-        "en": "English",
+        "en": "English (United States)",
         "ptBR": "Portuguese (Brazil)",
         "titles": {
           "title": "Language toggle",
-          "en": "Current language: English",
+          "en": "Current language: English (United States)",
           "ptBR": "Current language: Portuguese (Brazilian)"
         }
       },
