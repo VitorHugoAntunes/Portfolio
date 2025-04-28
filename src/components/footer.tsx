@@ -19,7 +19,7 @@ function Footer() {
               <div>
                 <a
                   href="mailto:vitor4ntunes@gmail.com"
-                  className="text-2xl md:text-5xl font-bold block mt-4 hover:text-muted-foreground"
+                  className="text-2xl md:text-5xl text-center md:text-left font-bold block mt-4 hover:text-muted-foreground"
                   title={getNestedTranslation(translations, 'footer.socials.email.title', '')}
                   onClick={(event) => {
                     event.preventDefault();
@@ -31,7 +31,7 @@ function Footer() {
                 <a
                   href="https://api.whatsapp.com/send?phone=5511973220877"
                   target="_blank"
-                  className="text-2xl md:text-5xl font-bold block mt-4 hover:text-muted-foreground"
+                  className="text-2xl md:text-5xl text-center md:text-left font-bold block mt-4 hover:text-muted-foreground"
                   title={getNestedTranslation(translations, 'footer.socials.whatsapp.title', '')}
                   aria-label={getNestedTranslation(translations, 'footer.socials.whatsapp.title', '')}
                 >
@@ -47,7 +47,7 @@ function Footer() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div>
-                <p className="text-lg">
+                <p className="text-lg text-center md:text-left">
                   {getNestedTranslation(translations, 'footer.location', '')}<br />
                   2025
                 </p>

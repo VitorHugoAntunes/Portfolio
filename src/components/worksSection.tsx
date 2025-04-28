@@ -33,7 +33,7 @@ function WorksSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true, amount: 0.2 }}
-            className="text-5xl md:text-7xl font-bold mb-8 leading-tight"
+            className="text-[2.7rem] md:text-7xl font-bold mb-8 leading-tight"
             aria-label="A developer focused on innovation and user-centric solutions"
           >
             {getNestedTranslation(translations, 'worksSection.title', '')}

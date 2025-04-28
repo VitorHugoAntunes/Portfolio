@@ -14,7 +14,6 @@ const LoadingSpinner = () => {
   return (
     <div className="min-h-screen w-full flex items-center justify-center bg-gray-50">
       <div className="relative w-12 h-12">
-        <div className="absolute inset-0 rounded-full bg-blue-200 opacity-20 animate-pulse"></div>
         <div className="absolute inset-0 animate-spin rounded-full border-3 border-transparent border-t-blue-500"></div>
       </div>
     </div>
