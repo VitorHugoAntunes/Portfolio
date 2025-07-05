@@ -1,23 +1,25 @@
 'use client';
 
+import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Button } from '@/components/ui/button';
 
-import MeuChaDigitalImage from '@/assets/meu-cha-digital.png';
-import LoqueiImage from '@/assets/loquei.png';
-import ForumPbImage from '@/assets/forum-pb.png';
 import DashboardImage from '@/assets/dashboard.png';
+import ForumPbImage from '@/assets/forum-pb.png';
+import LoqueiImage from '@/assets/loquei.png';
+import MeuChaDigitalImage from '@/assets/meu-cha-digital.png';
+import RfsacadasImage from '@/assets/rfsacadas.png';
+import { getNestedTranslation } from '@/utils/getTranslation';
 import { ArrowRight } from 'lucide-react';
-import { getNestedTranslation } from '@/utils/getTranslation'
 import { useTranslation } from './translation-provider';
 
 const works = [
-  { id: 1, title: 'Meu Chá Digital', category: 'Fullstack', image: MeuChaDigitalImage, slug: 'https://meuchadigital.com/' },
-  { id: 2, title: 'Loquei', category: 'Mobile', image: LoqueiImage, slug: 'https://www.linkedin.com/posts/vitor-hugo-antunes-passos-59151018a_loquei-activity-7270036767825612800-FbqB/?utm_source=share&utm_medium=member_desktop&rcm=ACoAACyR8D0Bol5ueu8S1gb5iExaXNttr3nLBJU' },
-  { id: 3, title: 'Forum.pb', category: 'Fullstack', image: ForumPbImage, slug: 'https://react-forum-peach.vercel.app/' },
-  { id: 4, title: 'Dashboard', category: 'Frontend', image: DashboardImage, slug: 'https://reactjs-dashboard-test.netlify.app' },
+  { id: 1, title: 'RF Sacadas', category: 'Frontend', image: RfsacadasImage, slug: 'https://rfsacadas.com.br/' },
+  { id: 2, title: 'Meu Chá Digital', category: 'Fullstack', image: MeuChaDigitalImage, slug: 'https://meuchadigital.com/' },
+  { id: 3, title: 'Loquei', category: 'Mobile', image: LoqueiImage, slug: 'https://www.linkedin.com/posts/vitor-hugo-antunes-passos-59151018a_loquei-activity-7270036767825612800-FbqB/?utm_source=share&utm_medium=member_desktop&rcm=ACoAACyR8D0Bol5ueu8S1gb5iExaXNttr3nLBJU' },
+  { id: 4, title: 'Forum.pb', category: 'Fullstack', image: ForumPbImage, slug: 'https://react-forum-peach.vercel.app/' },
+  { id: 5, title: 'Dashboard', category: 'Frontend', image: DashboardImage, slug: 'https://reactjs-dashboard-test.netlify.app' },
 ];
 
 function WorksSection() {
@@ -74,15 +76,15 @@ function WorksSection() {
                 aria-label={`View the project ${work.title}`}
               >
                 <div
-                  className="overflow-hidden rounded-lg bg-[#f0f0f0] h-64 border border-gray-200 transition-transform duration-300"
+                  className="overflow-hidden rounded-lg bg-[#f0f0f0] h-72 border border-gray-200 transition-transform duration-300"
                   role="img"
                   aria-labelledby={`work-${work.id}-title`}
                 >
                   <Image
                     src={work.image}
                     alt={work.title}
-                    width={500}
-                    height={500}
+                    width={1000}
+                    height={1000}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
@@ -111,7 +113,7 @@ function WorksSection() {
           <div className="flex justify-center">
             <Button size="lg" asChild>
               <Link
-                href="https://www.linkedin.com/in/vitor-hugo-antunes-passos-59151018a/details/certifications/"
+                href="https://www.linkedin.com/in/vitor-hugo-antunes-passos/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="View more projects"
