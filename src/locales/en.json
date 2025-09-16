@@ -112,6 +112,188 @@
     "subtitle": "My journey started with a passion for solving complex problems through code and creating seamless digital experiences.",
     "button": {
       "title": "View More Projects"
+    },
+    "date": "Date",
+    "viewDetails": "View Details",
+    "viewProject": "View Project",
+    "technologies": "Used Technologies",
+    "features": "Main Features",
+    "challenges": "Challenges and Solutions",
+    "projects": {
+      "docsite": {
+        "title": "DocSite",
+        "category": "Frontend",
+        "description": "An open source technical documentation platform for data structures with responsive design and advanced search.",
+        "longDescription": "DocSite is an open source solution focused on providing clear and accessible technical documentation for data structures. With responsive design and advanced search functionality, DocSite facilitates navigation and understanding of complex concepts, making it an essential tool for developers and programming students.",
+        "technologies": [
+          "React",
+          "Next.js",
+          "TypeScript",
+          "Tailwind CSS",
+          "Remark",
+          "Rehype",
+          "MDX",
+          "Static Site Generation"
+        ],
+        "features": [
+          "Responsive design",
+          "Advanced search",
+          "Category navigation",
+          "MDX documentation",
+          "Static site generation"
+        ],
+        "status": "Active",
+        "date": "2025",
+        "challenges": "Implement an efficient search system and create an intuitive navigation structure to facilitate access to information."
+      },
+      "rfsacadas": {
+        "title": "RF Sacadas",
+        "category": "Frontend",
+        "description": "Institutional landing page for company specialized in glass balconies, with conversion focus.",
+        "longDescription": "Development of a modern and optimized institutional website for RF Sacadas, a company focused on glass balcony solutions. The project focused on creating a visual experience that converts visitors into customers, while ensuring excellent performance and optimized SEO to improve the company's online visibility.",
+        "technologies": [
+          "React",
+          "Next.js",
+          "TypeScript",
+          "Tailwind CSS",
+          "Framer Motion",
+          "SEO",
+          "Zod"
+        ],
+        "features": [
+          "Responsive design",
+          "Project gallery",
+          "Contact form",
+          "SEO optimization",
+          "Smooth animations"
+        ],
+        "status": "Active",
+        "date": "2025",
+        "challenges": "Create a design that conveys trust and quality, while optimizing the site for lead conversion."
+      },
+      "meuchadigital": {
+        "title": "Meu Chá Digital",
+        "category": "Fullstack",
+        "description": "Complete digital platform for organizing baby showers and weddings.",
+        "longDescription": "A fullstack application that revolutionizes how people organize their baby showers and weddings. The platform offers complete tools for creating digital invitations, gift lists, RSVP confirmation and much more.",
+        "technologies": [
+          "React",
+          "Next.js",
+          "Node.js",
+          "PostgreSQL",
+          "Prisma",
+          "TypeScript",
+          "Tailwind CSS",
+          "EFI Bank API",
+          "NGINX",
+          "Multer",
+          "Socket.io",
+          "OAuth2",
+          "AWS S3",
+          "AWS EC2",
+          "Nodemailer",
+          "Zod"
+        ],
+        "features": [
+          "Digital invitations",
+          "Gift lists",
+          "RSVP confirmation",
+          "Integrated payment",
+          "Administrative dashboard",
+          "Real-time payments"
+        ],
+        "status": "Active",
+        "date": "2025",
+        "challenges": "Integrate real-time PIX payment system and create a smooth experience for both organizers and guests."
+      },
+      "loquei": {
+        "title": "Loquei",
+        "category": "Mobile",
+        "description": "Android app for renting various items between users.",
+        "longDescription": "Loquei is an innovative mobile app that connects people who want to rent items with those who have these items available. A sustainable solution that promotes conscious consumption and collaborative economy.",
+        "technologies": [
+          "React Native",
+          "Expo",
+          "TypeScript",
+          "Java",
+          "PostgresSQL",
+          "React Query",
+          "Axios",
+          "Magic Link",
+          "Zod",
+          "Clean Architecture"
+        ],
+        "features": [
+          "Rental system",
+          "User profile",
+          "Reviews and feedback",
+          "WhatsApp integration",
+          "Android APK"
+        ],
+        "status": "In development",
+        "date": "2024",
+        "challenges": "Implement a trust system between users and optimize the mobile experience for different devices."
+      },
+      "forumpb": {
+        "title": "Forum.pb",
+        "category": "Fullstack",
+        "description": "Modern forum with authentication system, posts, comments and likes.",
+        "longDescription": "A complete forum developed with modern technologies, offering a rich experience for online community. Includes authentication system, post creation, comments, likes and content moderation.",
+        "technologies": [
+          "React",
+          "Firebase Auth",
+          "Firestore",
+          "TypeScript",
+          "Styled Components",
+          "Redux Toolkit",
+          "Axios",
+          "Zod",
+          "Vercel"
+        ],
+        "features": [
+          "Posts and comments system",
+          "Social authentication",
+          "Like system"
+        ],
+        "status": "Active",
+        "date": "2024",
+        "challenges": "Create a secure authentication system and implement interactive features like likes and real-time comments."
+      },
+      "dashboard": {
+        "title": "Dashboard",
+        "category": "Frontend",
+        "description": "Modern administrative dashboard with interactive charts and metrics.",
+        "longDescription": "A complete dashboard for data analysis and administration, with interactive visualizations and responsive design. Perfect for tracking business metrics and making data-driven decisions.",
+        "technologies": [
+          "React",
+          "TypeScript",
+          "Recharts",
+          "Styled Components",
+          "React Router",
+          "Firebase",
+          "XLSX",
+          "Vercel"
+        ],
+        "features": [
+          "Interactive charts",
+          "Metrics",
+          "Filters",
+          "Excel data export",
+          "Customizable theme",
+          "Responsive"
+        ],
+        "status": "Active",
+        "date": "2024",
+        "challenges": "Optimize performance for large data volumes and create visualizations that were both informative and aesthetically pleasing."
+      }
+    },
+    "detailsModal": {
+      "date": "Date",
+      "status": "Status",
+      "technologiesTitle": "Technologies Used",
+      "featuresTitle": "Main Features",
+      "challengesTitle": "Challenges and Solutions",
+      "github": "GitHub"
     }
   },
   "faqSection": {

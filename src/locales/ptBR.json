@@ -109,9 +109,191 @@
   },
   "worksSection": {
     "title": "Um desenvolvedor focado em inovação e soluções centradas no usuário.",
-    "subtitle": "Minha jornada começou com uma paixão por resolver problemas complexos através do código e criar experiências digitais fluídas.",
+    "subtitle": "Minha jornada começou com uma paixão por resolver problemas complexos através do código e criar experiências digitais perfeitas.",
     "button": {
       "title": "Ver Mais Projetos"
+    },
+    "date": "Data",
+    "viewDetails": "Ver Detalhes",
+    "viewProject": "Ver Projeto",
+    "technologies": "Tecnologias Utilizadas",
+    "features": "Principais Funcionalidades",
+    "challenges": "Desafios e Soluções",
+    "projects": {
+      "docsite": {
+        "title": "DocSite",
+        "category": "Frontend",
+        "description": "Uma plataforma open source de documentação técnica de estrutura de dados com design responsivo e busca avançada.",
+        "longDescription": "O DocSite é uma solução open source focada em fornecer uma documentação técnica clara e acessível para estruturas de dados. Com um design responsivo e uma funcionalidade de busca avançada, o DocSite facilita a navegação e o entendimento de conceitos complexos, tornando-o uma ferramenta essencial para desenvolvedores e estudantes de programação.",
+        "technologies": [
+          "React",
+          "Next.js",
+          "TypeScript",
+          "Tailwind CSS",
+          "Remark",
+          "Rehype",
+          "MDX",
+          "Static Site Generation"
+        ],
+        "features": [
+          "Design responsivo",
+          "Busca avançada",
+          "Navegação por categorias",
+          "Documentação em MDX",
+          "Static site generation"
+        ],
+        "status": "Ativo",
+        "date": "2025",
+        "challenges": "Implementar um sistema de busca eficiente e criar uma estrutura de navegação intuitiva para facilitar o acesso à informação."
+      },
+      "rfsacadas": {
+        "title": "RF Sacadas",
+        "category": "Frontend",
+        "description": "Landing Page institucional para empresa especializada em sacadas de vidro, com foco em conversão.",
+        "longDescription": "Desenvolvimento de um site institucional moderno e otimizado para RF Sacadas, empresa com foco em soluções de sacadas de vidro. O projeto focou na criação de uma experiência visual que converte visitantes em clientes, além de garantir um desempenho excelente e SEO otimizado para melhorar a visibilidade online da empresa.",
+        "technologies": [
+          "React",
+          "Next.js",
+          "TypeScript",
+          "Tailwind CSS",
+          "Framer Motion",
+          "SEO",
+          "Zod"
+        ],
+        "features": [
+          "Design responsivo",
+          "Galeria de projetos",
+          "Formulário de contato",
+          "Otimização SEO",
+          "Animações suaves"
+        ],
+        "status": "Ativo",
+        "date": "2025",
+        "challenges": "Criar um design que transmitisse confiança e qualidade, além de otimizar o site para conversão de leads."
+      },
+      "meuchadigital": {
+        "title": "Meu Chá Digital",
+        "category": "Fullstack",
+        "description": "Plataforma digital completa para organização de chás de bebê e casamento.",
+        "longDescription": "Uma aplicação fullstack que revoluciona a forma como as pessoas organizam seus chás de bebê e casamento. A plataforma oferece ferramentas completas para criação de convites digitais, lista de presentes, confirmação de presença e muito mais.",
+        "technologies": [
+          "React",
+          "Next.js",
+          "Node.js",
+          "PostgreSQL",
+          "Prisma",
+          "TypeScript",
+          "Tailwind CSS",
+          "EFI Bank API",
+          "NGINX",
+          "Multer",
+          "Socket.io",
+          "OAuth2",
+          "AWS S3",
+          "AWS EC2",
+          "Nodemailer",
+          "Zod"
+        ],
+        "features": [
+          "Convites digitais",
+          "Lista de presentes",
+          "Confirmação de presença",
+          "Pagamento integrado",
+          "Dashboard administrativo",
+          "Pagamentos em tempo real"
+        ],
+        "status": "Ativo",
+        "date": "2025",
+        "challenges": "Integrar sistema de pagamento com PIX em tempo real e criar uma experiência fluida tanto para organizadores quanto para convidados."
+      },
+      "loquei": {
+        "title": "Loquei",
+        "category": "Mobile",
+        "description": "Aplicativo Android para aluguel de itens diversos entre usuários.",
+        "longDescription": "O Loquei é um aplicativo móvel inovador que conecta pessoas que querem alugar itens com aquelas que possuem esses itens disponíveis. Uma solução sustentável que promove o consumo consciente e a economia colaborativa.",
+        "technologies": [
+          "React Native",
+          "Expo",
+          "TypeScript",
+          "Java",
+          "PostgresSQL",
+          "React Query",
+          "Axios",
+          "Magic Link",
+          "Zod",
+          "Clean Architecture"
+        ],
+        "features": [
+          "Sistema de aluguel",
+          "Perfil de usuário",
+          "Avaliações e feedback",
+          "Integração com Whatsapp",
+          "APK para Android"
+        ],
+        "status": "Em desenvolvimento",
+        "date": "2024",
+        "challenges": "Implementar um sistema de confiança entre usuários e otimizar a experiência mobile para diferentes dispositivos."
+      },
+      "forumpb": {
+        "title": "Forum.pb",
+        "category": "Fullstack",
+        "description": "Fórum moderno com sistema de autenticação, posts, comentários e likes.",
+        "longDescription": "Um fórum completo desenvolvido com tecnologias modernas, oferecendo uma experiência rica para comunidade online. Inclui sistema de autenticação, criação de posts, comentários, likes e moderação de conteúdo.",
+        "technologies": [
+          "React",
+          "Firebase Auth",
+          "Firestore",
+          "TypeScript",
+          "Styled Components",
+          "Redux Toolkit",
+          "Axios",
+          "Zod",
+          "Vercel"
+        ],
+        "features": [
+          "Sistema de posts e comentários",
+          "Autenticação social",
+          "Sistema de curtidas"
+        ],
+        "status": "Ativo",
+        "date": "2024",
+        "challenges": "Criar um sistema de autenticação seguro e implementar funcionalidades interativas como likes e comentários em tempo real."
+      },
+      "dashboard": {
+        "title": "Dashboard",
+        "category": "Frontend",
+        "description": "Dashboard administrativo moderno com gráficos interativos e métricas.",
+        "longDescription": "Um dashboard completo para análise de dados e administração, com visualizações interativas e design responsivo. Perfeito para acompanhar métricas de negócio e tomar decisões baseadas em dados.",
+        "technologies": [
+          "React",
+          "TypeScript",
+          "Recharts",
+          "Styled Components",
+          "React Router",
+          "Firebase",
+          "XLSX",
+          "Vercel"
+        ],
+        "features": [
+          "Gráficos interativos",
+          "Métricas",
+          "Filtros",
+          "Exportação de dados para Excel",
+          "Tema personalizável",
+          "Responsivo"
+        ],
+        "status": "Ativo",
+        "date": "2024",
+        "challenges": "Otimizar o desempenho de volumes de dados e criar visualizações que fossem tanto informativas quanto esteticamente agradáveis."
+      }
+    },
+    "detailsModal": {
+      "date": "Data",
+      "status": "Status",
+      "technologiesTitle": "Tecnologias Utilizadas",
+      "featuresTitle": "Principais Funcionalidades",
+      "challengesTitle": "Desafios e Soluções",
+      "github": "GitHub"
     }
   },
   "faqSection": {
