@@ -47,6 +47,11 @@ export function WorkDetailsContent({ work }: WorkDetailsContentProps) {
           width={800}
           height={400}
           className="w-full h-48 sm:h-56 object-cover transition-transform hover:scale-105 duration-300"
+          title={work.title}
+          role="img"
+          aria-labelledby={`work-${work.id}-title`}
+          priority
+          loading="eager"
         />
       </div>
 
@@ -117,14 +122,14 @@ export function WorkDetailsContent({ work }: WorkDetailsContentProps) {
       </div>
 
       <div className="flex flex-col sm:flex-row gap-3 pt-4">
-        <Button asChild className="flex-1 h-11">
+        <Button asChild className="flex-1 h-11" title={getNestedTranslation(translations, 'worksSection.viewProject', 'Ver Projeto')}>
           <Link href={work.slug} target="_blank" rel="noopener noreferrer">
             <ExternalLink className="w-4 h-4 mr-2" />
             {getNestedTranslation(translations, 'worksSection.viewProject', 'Ver Projeto')}
           </Link>
         </Button>
         {work.github && (
-          <Button variant="outline" asChild className="flex-1 h-11">
+          <Button variant="outline" asChild className="flex-1 h-11" title={getNestedTranslation(translations, 'worksSection.github', 'GitHub')}>
             <Link href={work.github} target="_blank" rel="noopener noreferrer">
               <Github className="w-4 h-4 mr-2" />
               {getNestedTranslation(translations, 'worksSection.github', 'GitHub')}

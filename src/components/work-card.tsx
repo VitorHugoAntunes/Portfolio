@@ -39,6 +39,11 @@ export function WorkCard({ work, onViewDetails }: WorkCardProps) {
             width={1000}
             height={1000}
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            title={work.title}
+            priority
+            role="img"
+            aria-labelledby={`work-${work.id}-title`}
+            loading="eager"
           />
         </div>
         <div className="mt-4 text-center">
@@ -52,7 +57,7 @@ export function WorkCard({ work, onViewDetails }: WorkCardProps) {
           <p className="text-sm font-medium text-muted-foreground mb-3">{work.category}</p>
           <p className="text-sm text-muted-foreground mb-4 leading-relaxed">{work.description}</p>
           <div className="flex gap-2 justify-center">
-            <Button variant="outline" size="sm" onClick={() => onViewDetails(work)} className='cursor-pointer'>
+            <Button variant="outline" size="sm" onClick={() => onViewDetails(work)} className='cursor-pointer' title={getNestedTranslation(translations, 'worksSection.viewDetails', 'Ver Detalhes')}>
               <Eye className="w-4 h-4 mr-2" />
               {getNestedTranslation(translations, 'worksSection.viewDetails', 'Ver Detalhes')}
             </Button>
@@ -62,6 +67,7 @@ export function WorkCard({ work, onViewDetails }: WorkCardProps) {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={`View the project ${work.title}`}
+                title={getNestedTranslation(translations, 'worksSection.viewProject', 'Ver Projeto')}
               >
                 <ExternalLink className="w-4 h-4 mr-2" />
                 {getNestedTranslation(translations, 'worksSection.viewProject', 'Ver Projeto')}
