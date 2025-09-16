@@ -49,8 +49,8 @@ export function WorkCard({ work, onViewDetails }: WorkCardProps) {
           >
             {work.title}
           </h3>
-          <p className="text-sm font-medium text-gray-600 mb-3">{work.category}</p>
-          <p className="text-sm text-gray-700 mb-4 leading-relaxed">{work.description}</p>
+          <p className="text-sm font-medium text-muted-foreground mb-3">{work.category}</p>
+          <p className="text-sm text-muted-foreground mb-4 leading-relaxed">{work.description}</p>
           <div className="flex gap-2 justify-center">
             <Button variant="outline" size="sm" onClick={() => onViewDetails(work)} className='cursor-pointer'>
               <Eye className="w-4 h-4 mr-2" />
