@@ -3,7 +3,7 @@
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import type { Work } from '@/types/works';
-import { getNestedTranslation } from '@/utils/getTranslation';
+import { getNestedTranslation } from '@/utils/get-translation';
 import { Calendar, Code2, ExternalLink, Eye, Github } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';

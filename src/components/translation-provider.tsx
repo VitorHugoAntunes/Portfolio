@@ -20,7 +20,7 @@ const TranslationContext = createContext<TranslationContextType | undefined>(und
 const loadTranslations = (language: Language): Promise<NestedTranslation> => {
   switch (language) {
     case 'pt':
-      return import('@/locales/ptBR.json').then((module) => module.default as NestedTranslation);
+      return import('@/locales/pt-br.json').then((module) => module.default as NestedTranslation);
     case 'en':
     default:
       return import('@/locales/en.json').then((module) => module.default as NestedTranslation);

@@ -1,27 +1,27 @@
 "use client";
-import { motion } from 'framer-motion';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Separator } from '@/components/ui/separator';
+import { getNestedTranslation } from '@/utils/get-translation';
+import { motion } from 'framer-motion';
 import { useTranslation } from './translation-provider';
-import { getNestedTranslation } from '@/utils/getTranslation'
 
 function FAQSection() {
   const { translations } = useTranslation()
 
   const faqs = [
-    { 
+    {
       question: getNestedTranslation(translations, 'faqSection.questions.question1.question', ''),
       answer: getNestedTranslation(translations, 'faqSection.questions.question1.answer', '')
     },
-    { 
+    {
       question: getNestedTranslation(translations, 'faqSection.questions.question2.question', ''),
       answer: getNestedTranslation(translations, 'faqSection.questions.question2.answer', '')
     },
-    { 
+    {
       question: getNestedTranslation(translations, 'faqSection.questions.question3.question', ''),
       answer: getNestedTranslation(translations, 'faqSection.questions.question3.answer', '')
     },
-    { 
+    {
       question: getNestedTranslation(translations, 'faqSection.questions.question4.question', ''),
       answer: getNestedTranslation(translations, 'faqSection.questions.question4.answer', '')
     },
@@ -55,15 +55,15 @@ function FAQSection() {
                   role="listitem"
                 >
                   <AccordionItem value={`item-${index}`} className="border-none">
-                    <AccordionTrigger 
+                    <AccordionTrigger
                       className="flex justify-between items-center w-full py-4 text-left cursor-pointer group hover:underline"
-                      aria-expanded="false" 
+                      aria-expanded="false"
                       aria-controls={`content-${index}`}
                     >
                       <span className="text-sm font-bold">{faq.question}</span>
                     </AccordionTrigger>
 
-                    <AccordionContent 
+                    <AccordionContent
                       id={`content-${index}`}
                       className="overflow-hidden text-sm data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
                       aria-labelledby={`item-${index}`}

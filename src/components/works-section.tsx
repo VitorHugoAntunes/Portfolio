@@ -3,7 +3,7 @@
 import { Button } from '@/components/ui/button';
 import { getTranslatedWorks } from '@/data/works';
 import type { Work } from '@/types/works';
-import { getNestedTranslation } from '@/utils/getTranslation';
+import { getNestedTranslation } from '@/utils/get-translation';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';

@@ -1,6 +1,6 @@
+import { getNestedTranslation } from '@/utils/get-translation';
 import { motion } from 'framer-motion';
 import { useTranslation } from './translation-provider';
-import { getNestedTranslation } from '@/utils/getTranslation'
 
 function ContentSection() {
   const { translations } = useTranslation()

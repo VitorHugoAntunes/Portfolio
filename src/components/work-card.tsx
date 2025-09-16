@@ -2,7 +2,7 @@
 
 import { Button } from '@/components/ui/button';
 import type { Work } from '@/types/works';
-import { getNestedTranslation } from '@/utils/getTranslation';
+import { getNestedTranslation } from '@/utils/get-translation';
 import { motion } from 'framer-motion';
 import { ExternalLink, Eye } from 'lucide-react';
 import Image from 'next/image';

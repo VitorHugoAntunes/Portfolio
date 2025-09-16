@@ -1,6 +1,6 @@
 "use client"
 
-import { Moon, Sun, Check } from 'lucide-react'
+import { Check, Moon, Sun } from 'lucide-react'
 
 import { useTheme } from '@/components/theme-provider'
 import { Button } from '@/components/ui/button'
@@ -8,13 +8,13 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuTrigger,
   DropdownMenuLabel,
-  DropdownMenuSeparator
+  DropdownMenuSeparator,
+  DropdownMenuTrigger
 } from '@/components/ui/dropdown-menu'
 
-import { useTranslation } from './translation-provider';
-import { getNestedTranslation } from '@/utils/getTranslation';
+import { getNestedTranslation } from '@/utils/get-translation'
+import { useTranslation } from './translation-provider'
 
 export function ThemeToggle() {
   const { theme, setTheme } = useTheme()

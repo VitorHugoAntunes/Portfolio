@@ -1,12 +1,12 @@
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
 import { motion } from "framer-motion";
 import { Download } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 import hero from "@/assets/hero.png";
 
-import { getNestedTranslation } from '@/utils/getTranslation'
+import { getNestedTranslation } from '@/utils/get-translation';
 import { useTranslation } from "./translation-provider";
 
 const HeroSection = () => {

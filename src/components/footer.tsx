@@ -1,7 +1,7 @@
+import { getNestedTranslation } from '@/utils/get-translation';
+import { Github, Linkedin } from 'lucide-react';
 import Link from "next/link";
-import { Linkedin, Github } from 'lucide-react';
 import { useTranslation } from "./translation-provider";
-import { getNestedTranslation } from '@/utils/getTranslation'
 
 function Footer() {
   const { translations } = useTranslation()

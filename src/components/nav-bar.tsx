@@ -1,13 +1,13 @@
 'use client'
 
+import { getNestedTranslation } from '@/utils/get-translation'
 import { Menu, X } from 'lucide-react'
-import { Button } from './ui/button'
-import { useState } from 'react'
 import Link from 'next/link'
-import { ThemeToggle } from './theme-togle'
+import { useState } from 'react'
 import { LanguageToggle } from './language-toggle'
+import { ThemeToggle } from './theme-togle'
 import { useTranslation } from './translation-provider'
-import { getNestedTranslation } from '@/utils/getTranslation'
+import { Button } from './ui/button'
 
 function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)

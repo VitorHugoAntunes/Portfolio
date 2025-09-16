@@ -1,20 +1,20 @@
 'use client'
 
-import Flag from 'react-world-flags'
 import { Check } from 'lucide-react'
+import Flag from 'react-world-flags'
 
 import { Button } from '@/components/ui/button'
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuTrigger,
   DropdownMenuLabel,
-  DropdownMenuSeparator
+  DropdownMenuSeparator,
+  DropdownMenuTrigger
 } from '@/components/ui/dropdown-menu'
 
+import { getNestedTranslation } from '@/utils/get-translation'
 import { useTranslation } from './translation-provider'
-import { getNestedTranslation } from '@/utils/getTranslation'
 
 export function LanguageToggle() {
   const { language, setLanguage } = useTranslation()

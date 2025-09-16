@@ -1,17 +1,17 @@
-import { motion } from 'framer-motion';
-import Image from 'next/image';
-import { cn } from "@/lib/utils";
-import Link from 'next/link';
-import { Button } from "@/components/ui/button";
-import { ArrowRight } from 'lucide-react';
-import { Separator } from '@/components/ui/separator';
-import fatecImage from '@/assets/fatec.jpg';
 import awsImage from '@/assets/aws.png';
 import compassImage from '@/assets/compasso-uol-1024.png';
-import rocketSeatImage from '@/assets/rocketseat.jpeg';
 import etecImage from '@/assets/etec.jpg';
+import fatecImage from '@/assets/fatec.jpg';
+import rocketSeatImage from '@/assets/rocketseat.jpeg';
+import { Button } from "@/components/ui/button";
+import { Separator } from '@/components/ui/separator';
+import { cn } from "@/lib/utils";
+import { getNestedTranslation } from '@/utils/get-translation';
+import { motion } from 'framer-motion';
+import { ArrowRight } from 'lucide-react';
+import Image from 'next/image';
+import Link from 'next/link';
 import { useTranslation } from './translation-provider';
-import { getNestedTranslation } from '@/utils/getTranslation'
 
 function AcademicSection() {
   const { translations } = useTranslation()
@@ -49,7 +49,7 @@ function AcademicSection() {
       description: `
         ${getNestedTranslation(translations, 'academicSection.certifications.rocketseat.institution', '')} •
         ${getNestedTranslation(translations, 'academicSection.certifications.rocketseat.workload', '')} •
-        ${getNestedTranslation(translations, 'academicSection.certifications.rocketseat.year', '')}`,	
+        ${getNestedTranslation(translations, 'academicSection.certifications.rocketseat.year', '')}`,
       image: rocketSeatImage,
     },
     {

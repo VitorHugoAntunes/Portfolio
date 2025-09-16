@@ -1,16 +1,16 @@
-import { motion } from 'framer-motion';
-import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { z } from 'zod';
+import { motion } from 'framer-motion';
+import { Ban, Check, Info } from 'lucide-react';
+import { useForm } from 'react-hook-form';
 import { toast, Toaster } from 'sonner';
-import { Check, Ban, Info } from 'lucide-react';
+import { z } from 'zod';
 
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Textarea } from '@/components/ui/textarea';
+import { getNestedTranslation } from '@/utils/get-translation';
 import { useTranslation } from './translation-provider';
-import { getNestedTranslation } from '@/utils/getTranslation';
 
 const contactSchema = z.object({
   firstName: z.string().min(1, 'ctaSection.form.fields.firstName.error'),

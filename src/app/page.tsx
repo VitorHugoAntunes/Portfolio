@@ -1,14 +1,14 @@
 'use client';
 
+import AcademicSection from "@/components/academic-section";
 import ContentSection from "@/components/content";
 import CTASection from "@/components/cta";
 import FAQSection from "@/components/faq";
 import Footer from "@/components/footer";
 import HeroSection from "@/components/hero";
 import Navbar from "@/components/nav-bar";
-import WorksSection from "@/components/worksSection";
-import AcademicSection from "@/components/academicSection";
 import { useTranslation } from "@/components/translation-provider";
+import WorksSection from "@/components/works-section";
 
 const LoadingSpinner = () => {
   return (
