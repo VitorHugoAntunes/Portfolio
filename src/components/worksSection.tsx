@@ -1,29 +1,35 @@
 'use client';
 
 import { Button } from '@/components/ui/button';
-import { motion } from 'framer-motion';
-import Image from 'next/image';
-import Link from 'next/link';
-
-import DashboardImage from '@/assets/dashboard.png';
-import ForumPbImage from '@/assets/forum-pb.png';
-import LoqueiImage from '@/assets/loquei.png';
-import MeuChaDigitalImage from '@/assets/meu-cha-digital.png';
-import RfsacadasImage from '@/assets/rfsacadas.png';
+import { getTranslatedWorks } from '@/data/works';
+import type { Work } from '@/types/works';
 import { getNestedTranslation } from '@/utils/getTranslation';
+import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import Link from 'next/link';
+import { useState } from 'react';
 import { useTranslation } from './translation-provider';
-
-const works = [
-  { id: 1, title: 'RF Sacadas', category: 'Frontend', image: RfsacadasImage, slug: 'https://rfsacadas.com.br/' },
-  { id: 2, title: 'Meu Chá Digital', category: 'Fullstack', image: MeuChaDigitalImage, slug: 'https://meuchadigital.com/' },
-  { id: 3, title: 'Loquei', category: 'Mobile', image: LoqueiImage, slug: 'https://www.linkedin.com/posts/vitor-hugo-antunes-passos-59151018a_loquei-activity-7270036767825612800-FbqB/?utm_source=share&utm_medium=member_desktop&rcm=ACoAACyR8D0Bol5ueu8S1gb5iExaXNttr3nLBJU' },
-  { id: 4, title: 'Forum.pb', category: 'Fullstack', image: ForumPbImage, slug: 'https://react-forum-peach.vercel.app/' },
-  { id: 5, title: 'Dashboard', category: 'Frontend', image: DashboardImage, slug: 'https://reactjs-dashboard-test.netlify.app' },
-];
+import { WorkCard } from './work-card';
+import { WorkDetailsModal } from './work-details-modal';
 
 function WorksSection() {
-  const { translations } = useTranslation()
+  const { translations } = useTranslation();
+  const [selectedWork, setSelectedWork] = useState<Work | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const translatedWorks = getTranslatedWorks(translations);
+
+  const handleViewDetails = (work: Work) => {
+    setSelectedWork(work);
+    setIsModalOpen(true);
+  };
+
+  const handleModalClose = (open: boolean) => {
+    setIsModalOpen(open);
+    if (!open) {
+      setSelectedWork(null);
+    }
+  };
 
   return (
     <section id="works" className="py-12 md:py-16" aria-labelledby="works-section-title">
@@ -52,54 +58,17 @@ function WorksSection() {
         </header>
 
         <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 mb-12"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 space-x-8 space-y-12 lg:space-y-24"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          {works.map((work) => (
-            <motion.article
+          {translatedWorks.map((work) => (
+            <WorkCard
               key={work.id}
-              role="listitem"
-              aria-labelledby={`work-${work.id}-title`}
-              className="group"
-              initial={{ opacity: 0, y: 150 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true, amount: 0.2 }}
-            >
-              <Link
-                href={work.slug}
-                className="block"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={`View the project ${work.title}`}
-              >
-                <div
-                  className="overflow-hidden rounded-lg bg-[#f0f0f0] h-72 border border-gray-200 transition-transform duration-300"
-                  role="img"
-                  aria-labelledby={`work-${work.id}-title`}
-                >
-                  <Image
-                    src={work.image}
-                    alt={work.title}
-                    width={1000}
-                    height={1000}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <div className="mt-4 text-center group-hover:text-primary/60 transition-colors duration-300">
-                  <h3
-                    id={`work-${work.id}-title`}
-                    className="text-base font-bold"
-                    aria-label={`Project title: ${work.title}`}
-                  >
-                    {work.title}
-                  </h3>
-                  <p className="text-sm font-medium">{work.category}</p>
-                </div>
-              </Link>
-            </motion.article>
+              work={work}
+              onViewDetails={handleViewDetails}
+            />
           ))}
         </motion.div>
 
@@ -108,24 +77,28 @@ function WorksSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true, amount: 0.2 }}
-          className="flex justify-center mb-12"
+          className="flex justify-center"
         >
-          <div className="flex justify-center">
-            <Button size="lg" asChild>
-              <Link
-                href="https://www.linkedin.com/in/vitor-hugo-antunes-passos/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="View more projects"
-                title={`${getNestedTranslation(translations, 'worksSection.button.title', '')}`}
-              >
-                <ArrowRight className="mr-2 h-4 w-4" />
-                {getNestedTranslation(translations, 'worksSection.button.title', '')}
-              </Link>
-            </Button>
-          </div>
+          <Button size="lg" asChild>
+            <Link
+              href="https://www.linkedin.com/in/vitor-hugo-antunes-passos/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="View more projects"
+              title={`${getNestedTranslation(translations, 'worksSection.button.title', '')}`}
+            >
+              <ArrowRight className="mr-2 h-4 w-4" />
+              {getNestedTranslation(translations, 'worksSection.button.title', '')}
+            </Link>
+          </Button>
         </motion.div>
       </div>
+
+      <WorkDetailsModal
+        work={selectedWork}
+        open={isModalOpen}
+        onOpenChange={handleModalClose}
+      />
     </section>
   );
 }
