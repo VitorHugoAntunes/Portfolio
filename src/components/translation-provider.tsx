@@ -1,9 +1,9 @@
 'use client'
 
-import { createContext, useContext, useEffect, useState } from 'react'
+import { createContext, useContext, useEffect, useState } from 'react';
 
 export type NestedTranslation = {
-  [key: string]: string | NestedTranslation;
+  [key: string]: string | string[] | NestedTranslation;
 };
 
 type Language = 'en' | 'pt'

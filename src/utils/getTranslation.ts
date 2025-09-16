@@ -6,14 +6,18 @@ export const getNestedTranslation = (
   defaultValue: string
 ): string => {
   try {
-    const value = path.split('.').reduce((obj, key) => {
-      if (obj && typeof obj === 'object' && key in obj) {
-        return obj[key];
-      }
-      throw new Error('Invalid path');
-    }, translations as NestedTranslation | string);
+    const keys = path.split('.');
+    let current: string | string[] | NestedTranslation = translations;
 
-    return typeof value === 'string' ? value : defaultValue;
+    for (const key of keys) {
+      if (current && typeof current === 'object' && !Array.isArray(current) && key in current) {
+        current = current[key];
+      } else {
+        throw new Error('Invalid path');
+      }
+    }
+
+    return typeof current === 'string' ? current : defaultValue;
   } catch {
     return defaultValue;
   }
