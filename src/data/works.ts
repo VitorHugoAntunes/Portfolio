@@ -3,6 +3,7 @@ import DocSiteImage from '@/assets/docsite.png';
 import ForumPbImage from '@/assets/forum-pb.png';
 import LoqueiImage from '@/assets/loquei.png';
 import MeuChaDigitalImage from '@/assets/meu-cha-digital.png';
+import HorizonWebImage from '@/assets/horizon-web.png';
 import RfsacadasImage from '@/assets/rfsacadas.png';
 import type { Work } from '@/types/works';
 import { StaticImageData } from 'next/image';
@@ -34,6 +35,21 @@ interface WorkWithTranslationKeys extends Omit<Work, 'title' | 'category' | 'des
 }
 
 export const worksData: WorkWithTranslationKeys[] = [
+  {
+    id: 0,
+    translationKey: 'horizonweb',
+    image: HorizonWebImage,
+    date: '2025',
+    staticData: {
+      technologies: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'i18n', 'Vercel', 'SEO', 'Hero UI'],
+      github: null,
+      slug: 'https://horizon-web-rho.vercel.app/',
+      screenshots: [HorizonWebImage]
+    },
+    slug: '',
+    github: null,
+    screenshots: [HorizonWebImage]
+  },
   {
     id: 1,
     translationKey: 'docsite',

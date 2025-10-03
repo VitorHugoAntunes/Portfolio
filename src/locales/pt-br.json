@@ -120,6 +120,33 @@
     "features": "Principais Funcionalidades",
     "challenges": "Desafios e Soluções",
     "projects": {
+      "horizonweb": {
+        "title": "Horizon Web",
+        "category": "Frontend",
+        "description": "Agência digital de desenvolvimento de soluções web modernas, responsivas e personalizadas.",
+        "longDescription": "O Horizon Web é uma agência digital especializada em criar soluções web modernas e responsivas. Com foco em inovação e experiência do usuário, o Horizon Web oferece serviços personalizados para atender às necessidades específicas de cada cliente, garantindo resultados excepcionais em cada projeto.",
+        "technologies": [
+          "React",
+          "Next.js",
+          "TypeScript",
+          "Tailwind CSS",
+          "Framer Motion",
+          "i18n",
+          "SEO",
+          "Hero UI",
+          "Vercel"
+        ],
+        "features": [
+          "Design responsivo",
+          "Navegação intuitiva",
+          "Seção de projetos detalhada",
+          "Animações suaves",
+          "Otimização SEO"
+        ],
+        "status": "Ativo",
+        "date": "2025",
+        "challenges": "Criar um design que fosse tanto esteticamente agradável quanto funcional, além de otimizar o site para SEO e desempenho."
+      },
       "docsite": {
         "title": "DocSite",
         "category": "Frontend",

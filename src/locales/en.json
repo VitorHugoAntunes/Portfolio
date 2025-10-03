@@ -120,6 +120,33 @@
     "features": "Main Features",
     "challenges": "Challenges and Solutions",
     "projects": {
+      "horizonweb": {
+        "title": "Horizon Web",
+        "category": "Frontend",
+        "description": "Digital agency specializing in developing modern, responsive, and customized web solutions.",
+        "longDescription": "Horizon Web is a digital agency dedicated to creating modern and responsive web solutions. With a focus on innovation and user experience, Horizon Web offers tailored services to meet each client's specific needs, ensuring exceptional results for every project.",
+        "technologies": [
+          "React",
+          "Next.js",
+          "TypeScript",
+          "Tailwind CSS",
+          "Framer Motion",
+          "i18n",
+          "SEO",
+          "Hero UI",
+          "Vercel"
+        ],
+        "features": [
+          "Responsive design",
+          "Intuitive navigation",
+          "Detailed project section",
+          "Smooth animations",
+          "SEO optimization"
+        ],
+        "status": "Active",
+        "date": "2025",
+        "challenges": "Creating a design that is both aesthetically beautiful and functional, while optimizing the site for SEO and performance."
+      },
       "docsite": {
         "title": "DocSite",
         "category": "Frontend",
