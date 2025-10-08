@@ -79,7 +79,7 @@ function WorksSection() {
           viewport={{ once: true, amount: 0.2 }}
           className="flex justify-center"
         >
-          <Button size="lg" asChild className='mt-12 lg:mt-0'>
+          <Button size="lg" asChild className='mt-12'>
             <Link
               href="https://www.linkedin.com/in/vitor-hugo-antunes-passos/"
               target="_blank"
