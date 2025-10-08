@@ -72,7 +72,7 @@ function AcademicSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true, amount: 0.2 }}
-          className="text-4xl md:text-6xl font-bold mb-12 leading-tight"
+          className="text-5xl md:text-7xl font-bold mb-12 leading-tight"
         >
           <span className="text-primary">
             {getNestedTranslation(translations, 'academicSection.title.span1', '')}

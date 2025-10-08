@@ -36,7 +36,7 @@ function FAQSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true, amount: 0.2 }}
-          className="text-4xl md:text-5xl font-bold mb-12 leading-tight"
+          className="text-5xl md:text-7xl font-bold mb-12 leading-tight"
         >
           {getNestedTranslation(translations, 'faqSection.title', '')}
         </motion.h2>
