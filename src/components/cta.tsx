@@ -69,7 +69,7 @@ function CTASection() {
 
   return (
     <section id="contact" className="py-12 md:py-16" role="region" aria-labelledby="contact-title">
-      <div className="container mx-auto px-4 max-w-7xl">
+      <div className="container mx-auto max-w-7xl">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           <header>
             <motion.h2

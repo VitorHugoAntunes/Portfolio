@@ -8,7 +8,7 @@ function Footer() {
 
   return (
     <footer className="py-12 md:py-16 bg-background" role="contentinfo">
-      <div className="container mx-auto px-4 max-w-7xl">
+      <div className="container mx-auto max-w-7xl">
         <div className="flex flex-col gap-12">
 
           <section aria-labelledby="contact-section">
