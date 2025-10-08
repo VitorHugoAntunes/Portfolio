@@ -11,9 +11,14 @@ function ContentSection() {
     'reactAndNodejs',
     'reactNative',
     'nextjs',
-    'restfulApis',
+    'restApis',
     'cloud',
     'database',
+    'testing',
+    'uiAndUx',
+    'versionControl',
+    'cms',
+    'seo'
   ];
 
   return (

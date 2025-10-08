@@ -57,9 +57,14 @@
       "reactAndNodejs": "React & Node.js",
       "reactNative": "React Native",
       "nextjs": "Next.js",
-      "restfulApis": "RESTful APIs",
+      "restApis": "REST APIs",
       "cloud": "AWS & Firebase",
-      "database": "PostgreSQL"
+      "database": "PostgreSQL",
+      "testing": "Testing & Quality",
+      "uiAndUx": "UI & UX",
+      "versionControl": "Git & GitHub",
+      "cms": "CMS & Headless CMS",
+      "seo": "SEO & Performance"
     },
     "description": "Currently, I focus on creating scalable and efficient solutions. I enjoy learning and applying new technologies, always focused on building systems that meet user needs and are sustainable in the long term. I aim to deliver clean, maintainable code and contribute to impactful projects."
   },
