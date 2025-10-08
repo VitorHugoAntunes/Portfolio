@@ -28,22 +28,22 @@ function FAQSection() {
   ];
 
   return (
-    <section className="py-12 md:py-16" aria-labelledby="faq-section">
-      <div className="container mx-auto px-4 max-w-7xl">
+    <section className="py-12 md:py-16 bg-foreground dark:bg-white" aria-labelledby="faq-section">
+      <div className="container mx-auto px-4 md:px-12 max-w-7xl">
         <motion.h2
           id="faq-section"
           initial={{ opacity: 0, y: 150 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true, amount: 0.2 }}
-          className="text-5xl md:text-7xl font-bold mb-12 leading-tight"
+          className="text-5xl md:text-7xl font-bold mb-12 leading-tight text-background"
         >
           {getNestedTranslation(translations, 'faqSection.title', '')}
         </motion.h2>
 
         <div role="region" aria-labelledby="faq-section" className="w-full">
           <Accordion type="single" collapsible className="w-full" aria-live="polite">
-            <div className="space-y-4 max-w-3xl">
+            <div className="space-y-4 w-full" role="list">
               {faqs.map((faq, index) => (
                 <motion.div
                   key={index}
@@ -60,7 +60,7 @@ function FAQSection() {
                       aria-expanded="false"
                       aria-controls={`content-${index}`}
                     >
-                      <span className="text-sm font-bold">{faq.question}</span>
+                      <span className="text-sm font-bold text-background">{faq.question}</span>
                     </AccordionTrigger>
 
                     <AccordionContent
@@ -68,7 +68,7 @@ function FAQSection() {
                       className="overflow-hidden text-sm data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
                       aria-labelledby={`item-${index}`}
                     >
-                      <div className="pb-4 pt-0 text-muted-foreground">{faq.answer}</div>
+                      <div className="pb-4 pt-0 text-muted-foreground dark:text-gray-700">{faq.answer}</div>
                     </AccordionContent>
                   </AccordionItem>
 
